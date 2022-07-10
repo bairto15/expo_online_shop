@@ -1,15 +1,9 @@
 import { StyleSheet, Text, View, Button } from "react-native";
 
-export default function Products({ navigation }) {
+export default function menuProduct({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Список товаров</Text>
-      <Button
-        title="Открыть товар"
-        onPress={() => {
-          navigation.navigate("navigateProduct");
-        }}
-      />
+      <Text>Меню товара</Text>
     </View>
   );
 }
