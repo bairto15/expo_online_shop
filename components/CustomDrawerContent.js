@@ -1,9 +1,7 @@
 import {
     View,
     Text,
-    StatusBar,
     StyleSheet,
-    Dimensions,
     SafeAreaView,
   } from "react-native";
   
@@ -19,7 +17,6 @@ import {
   
   const styles = StyleSheet.create({
     container: {
-      width: Dimensions.get("window").width * 0.92,
       flex: 1,
       flexDirection: "row",
       alignItems: "center",

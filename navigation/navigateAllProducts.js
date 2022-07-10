@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Header from "../components/headers";
 import Products from "../screens/products";
 import navigateProduct from "./navigateProduct";
+//import Login from "../screens/login";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +13,6 @@ export default function NavigateAllProducts() {
         component={Products}
         options={{
           title: "Список",
-          headerTitle: (props) => <Header {...props} />,
         }}
       />
       <Stack.Screen
