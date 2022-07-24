@@ -1,26 +1,21 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import Products from "../screens/products";
-import navigateProduct from "./navigateProduct";
-//import Login from "../screens/login";
+import ShopingCard from "../components/shopingCard";
+import ProductsSale from "../screens/productsSale";
 
-const Stack = createNativeStackNavigator();
+const SaleStack = createNativeStackNavigator();
 
 export default function NavigateSale() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="List"
-        component={Products}
+    <SaleStack.Navigator>
+      <SaleStack.Screen
+        name="ProductsSale"
+        component={ProductsSale}
         options={{
-          title: "Список",
+          title: "Горячее предложение",
+          headerRight: () => <ShopingCard />,
         }}
       />
-      <Stack.Screen
-        name="navigateProduct"
-        component={navigateProduct}
-        options={{ title: "Товар" }}
-      />
-    </Stack.Navigator>
+    </SaleStack.Navigator>
   );
 }

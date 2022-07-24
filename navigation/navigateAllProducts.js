@@ -1,25 +1,27 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Products from "../screens/products";
-import navigateProduct from "./navigateProduct";
-//import Login from "../screens/login";
 
-const Stack = createNativeStackNavigator();
+import ShopingCard from "../components/shopingCard";
+import Products from "../screens/products";
+import Product from "../screens/product";
+
+const AllStack = createNativeStackNavigator();
 
 export default function NavigateAllProducts() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="List"
+    <AllStack.Navigator>
+      <AllStack.Screen
+        name="Products"
         component={Products}
         options={{
-          title: "Список",
+          title: "Выберите категорию",
+          headerRight: () => <ShopingCard />,
         }}
       />
-      <Stack.Screen
-        name="navigateProduct"
-        component={navigateProduct}
+      <AllStack.Screen
+        name="Product"
+        component={Product}
         options={{ title: "Товар" }}
       />
-    </Stack.Navigator>
+    </AllStack.Navigator>
   );
 }
